@@ -1,0 +1,63 @@
+/* styles.css */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+}
+
+#video-container {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 60px); /* Adjust height to make space for controls */
+    overflow: hidden; /* Ensure videos don't overflow */
+}
+
+.video-player {
+    position: absolute;
+    width: 200px; /* Initial width */
+    height: 150px; /* Initial height */
+    object-fit: cover;
+    z-index: 1; /* Ensure videos are below controls */
+}
+
+#controls {
+    position: fixed;
+    bottom: 0; /* Position controls at the bottom */
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    z-index: 2; /* Ensure controls are above videos */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="range"], input[type="number"] {
+    margin-right: 20px;
+}
+
+button {
+    margin-right: 10px;
+}
+
+#fps {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode #controls {
+    background: rgba(18, 18, 18, 0.8);
+    border-top: 1px solid #333;
+}
